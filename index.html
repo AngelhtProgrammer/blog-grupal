@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background-color: #FFD700;
+  background-color: #d4b500;
 }
 
 .header-container {
@@ -128,7 +128,7 @@
     }
 
     footer {
-      background-color: #FFD700;
+      background-color: #d4b500;
       color: #000;
       text-align: center;
       padding: 10px;
@@ -156,8 +156,13 @@
     }
 
     @media (max-width: 480px) {
-      .menu {
+      header{
+        display: flex;
         flex-direction: column;
+      }
+      .menu {
+        flex-direction: row;
+        justify-content: space-around;
         gap: 10px;
       }
 
@@ -180,13 +185,15 @@
  
   <!-- Encabezado -->
   <header>
-    <h1 class="logo">La Guacamaya Caraqueña</h1>
-    <nav class="menu">
+    
+      <h1 class="logo">La Guacamaya Caraqueña</h1>
+      <nav class="menu">
       <a href="#inicio">Inicio</a>
       <a href="#blog">Blog</a>
       <a href="#galeria">Galería</a>
       <a href="#contacto">Contacto</a>
-    </nav>
+      </nav>
+    
   </header>
 
   <!-- Contenido Principal -->
