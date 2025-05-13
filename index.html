@@ -14,55 +14,54 @@
 
     header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: 20px;
       background-color: #FFD700;
-      color: #000;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .logo {
-      font-size: 2em;
+      font-size: 1.8em;
       font-weight: bold;
-      text-align: center;
       margin: 0;
     }
 
     .menu {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-
-    .menu ul {
-      list-style: none;
       display: flex;
       gap: 20px;
-      margin: 0;
-      padding: 0;
+      flex-wrap: wrap;
     }
 
-    .menu ul li a {
-      color: #000; 
+    .menu a {
+      color: #1C1C1C;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
 
-    .menu ul li a:hover {
-      color: #444; 
+    .menu a:hover {
+      color: #FF4500;
     }
 
     .seccion {
       padding: 40px 20px;
-      background-color: #FFD700; 
+      background-color: #FFD700;
       text-align: center;
+    }
+
+    .seccion p {
+      color: #2E2E2E;
+      font-size: 1.1em;
+      line-height: 1.6;
     }
 
     .imagenes {
       display: flex;
       gap: 15px;
       justify-content: center;
+      flex-wrap: wrap;
       margin: 20px 0;
     }
 
@@ -78,22 +77,12 @@
       transform: scale(1.05);
     }
 
-    .texto a {
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    .texto a:hover {
-      color: #FF4500;
-    }
-
     .github-icons {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin-top: 10px;
+      flex-wrap: wrap;
     }
 
     .github-icons a {
@@ -106,6 +95,28 @@
       color: #FF4500;
     }
 
+    .github-icons img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .github-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    .texto a {
+      color: #1C1C1C;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .texto a:hover {
+      color: #FF4500;
+    }
+
     footer {
       background-color: #FFD700;
       color: #000;
@@ -113,20 +124,58 @@
       padding: 10px;
       margin-top: 20px;
     }
+
+    @media (max-width: 768px) {
+      .menu {
+        justify-content: center;
+      }
+
+      .imagenes img {
+        width: 150px;
+        height: 120px;
+      }
+
+      .logo {
+        font-size: 1.5em;
+      }
+
+      .github-icons img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo {
+        font-size: 1.4em;
+      }
+
+      .imagenes img {
+        width: 120px;
+        height: 100px;
+      }
+
+      .github-icons {
+        gap: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Encabezado -->
   <header>
-    <h1 class="logo">La Guacamaya Venezolana</h1>
+    <h1 class="logo">La Guacamaya Caraqueña</h1>
     <nav class="menu">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+      <a href="#inicio">Inicio</a>
+      <a href="#blog">Blog</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
@@ -135,82 +184,70 @@
 
     <!-- Sección Inicio -->
     <section id="inicio" class="seccion">
-      <h2>La Guacamaya Venezolana</h2>
+      <h2>La Guacamaya Caraqueña</h2>
       <div class="imagenes">
-        <img src="guaca3.jpeg" alt="Guacamaya en su hábitat natural">
+        <img src="guacamaya caracas3.webp" alt="inicio1">
+        <img src="guacamaya caracas4.webp" alt="inicio2">
+        <img src="guacamayas caracas.webp" alt="inicio3">
+        <img src="guacamayas caracas1.webp" alt="inicio4">
       </div>
       <p>
-        La guacamaya venezolanas no solo son aves hermosas y coloridas, sino que representan un símbolo de la rica biodiversidad 
-        del país. Estas aves habitan principalmente en zonas selváticas y tropicales, donde encuentran abundante alimento y lugares 
-        seguros para anidar. La guacamaya en Venezuela, especialmente en Caracas, son aves muy populares y apreciadas. Son conocidas por su plumaje colorido, sus gritos y su capacidad de aprender palabras. Algunas especies comunes son la guacamaya roja (Ara macao), la guacamaya bandera (Ara militaris) y la guacamaya verde (Ara militaris) 
-
+        Las guacamayas Caraqueñas son aves emblemáticas del país, conocidas por su plumaje colorido y su carácter social. Habitan en zonas selváticas y tropicales donde encuentran alimento y lugares seguros para anidar. Las aves, que pueden crecer hasta un metro de largo, son un símbolo de Caracas, la ciudad capital construida en un valle separado del Mar Caribe por las montañas de la Cordillera de la Costa de Venezuela. Frecuentan terrazas y balcones de innumerables edificios en busca de alimento. La gente los alimenta e inunda las redes sociales con fotos de su brillante plumaje azul, verde, amarillo y rojo. (En general, los expertos desaconsejan darles comida a los animales salvajes, ya que puede dañarlos y crear una dependencia de los humanos. Pero tal consejo no parece ser bienvenido ni tomado en cuenta en este caso).
+      </p>
     </section>
 
     <!-- Sección Blog -->
     <section id="blog" class="seccion">
-      <h2>Guacamaya Venezolana y Todo lo que Debes Saber</h2>
+      <h2>Guacamaya Caraqueña & Todo lo que Debes Saber</h2>
       <div class="imagenes">
-        <img src="guaca13.jpg" alt="Guacamaya volando en libertad">
-      </div>
+        <img src="guacamayas caracas2.webp" alt="blog1">
+      <img src="guaca13.jpg" alt="blog2">
+    <img src="guaca5.jpg" alt="blog3">
+  <img src="guaca7.jpeg" alt="blog4"></div>
       <p>
-       La guacamaya viven en parejas o grandes bandadas. Se alimentan de frutos, semillas y arcilla para neutralizar toxinas. 
-        Forman vínculos de por vida y protegen sus nidos de depredadores. Sin embargo, la pérdida de hábitat amenaza su supervivencia.
-        Especies de guacamaya en Venezuela:
-Guacamaya roja (Ara macao):
-Es una de las guacamaya más grandes y coloridas, con un plumaje rojo, amarillo y azul. 
-Guacamaya bandera (Ara militaris):
-Se caracteriza por su plumaje de colores vivos, principalmente rojo, con plumas azules y amarillas en las alas. 
-Guacamaya verde (Ara militaris):
-Presenta un plumaje verde oscuro, con una diadema escarlata y rayas finas pardas y rojas en la cara. 
-Características y comportamiento:
-Tamaño: Pueden alcanzar hasta 90 centímetros de largo. 
-Hábitat: Se encuentran en bosques tropicales, sabanas y manglares. 
-Alimentación: Son omnívoras y se alimentan de semillas, frutos, insectos y otros alimentos. 
-Comportamiento social: Son aves sociales que viven en bandadas. 
-Relación con los humanos: Algunas guacamayas se han convertido en mascotas de la capital, según el blog de National Geographic. 
-Importancia cultural:
-Guardianas:
-Las guacamayas eran consideradas guardianas por las tribus indígenas venezolanas. 
-Símbolo de la naturaleza:
-Para muchas personas en Caracas, las guacamayas son un símbolo de la naturaleza en medio de la ciudad. 
-Mascotas:
-Son muy populares como mascotas debido a su belleza y capacidad de aprendizaje. 
-Amenazas:
-Pérdida de hábitat: La destrucción de los bosques tropicales amenaza a las guacamayas.
-Comercio ilegal: El comercio de guacamayas como mascotas es una amenaza para las poblaciones salvajes. 
+        Las guacamayas viven en parejas o grandes bandadas. Se alimentan de frutos, semillas y arcilla. Sin embargo, la pérdida de hábitat está amenazando su supervivencia. Lo que hace únicos a los guacamayos de Caracas es su diversidad, explica la bióloga Malú González, profesora de la Universidad Simón Bolívar. “Entre guacamayos, loros y periquitos, tenemos 17 especies volando aquí”, agrega González.
 
+Esto incluye cuatro especies de guacamayos, todas nativas de Venezuela. La maracana (Ara severa), mayormente verde, es la más pequeña y la única de esta región central. El guacamayo bandera (Ara macao) cuya coloración amarilla, azul y roja que recuerda a la bandera tricolor nacional, es originaria de los llanos y la región amazónica. El guacamayo rojo y verde (Ara chloroptera) mantiene pequeñas poblaciones en el este y oeste del país. Estos dos últimos han sido desplazados en los cielos de Caracas por el guacamayo azul y amarillo (Ara ararauna)
       </p>
     </section>
 
     <!-- Sección Galería -->
     <section id="galeria" class="seccion">
-      <h2>Galeria de la guacamaya venezolana</h2>
+      <h2>Galería de Guacamaya Caraqueña</h2>
       <div class="imagenes">
-        <img src="guaca8.jpeg" alt="Guacamaya Roja">
-        <img src="guaca9.jpeg" alt="Guacamaya Azul">
-        <img src="guaca11.jpg" alt="Guacamaya Verde">
-        <img src="guaca10.jpg" alt="Guacamaya Amarilla">
-        <img src="guaca12.jpg" alt="Guacamaya Multicolor">
+        <img src="guaca1.jpeg" alt="Guacamaya Roja">
+        <img src="guaca2.jpeg" alt="Guacamaya Azul">
+        <img src="guaca9.jpeg" alt="Guacamaya Verde">
+        <img src="guaca10.png" alt="Guacamaya Amarilla">
+        <img src="guaca11.jpg" alt="Guacamaya Multicolor">
+        <img src="guaca12.jpg" alt="Guacamaya volando en libertad">
+        <img src="guaca8.jpeg" alt="Guacamaya volando en libertad">
+        <img src="guaca6.jpeg" alt="Guacamaya volando en libertad">
+        <img src="guaca3.jpeg" alt="Guacamaya volando en libertad">
+        <img src="guaca4.jpeg" alt="Guacamaya volando en libertad">
       </div>
     </section>
 
     <!-- Sección Contacto -->
     <section id="contacto" class="seccion">
       <h2>Contactos</h2>
+      <p>
+        ¿Quieres saber más sobre la guacamaya Caraqueña? 
+      </p>
 
       <div class="github-icons">
         <a href="https://github.com/chirivt/blog-" target="_blank">
-          <img src="JOSUE.jpg" alt="GitHub Josué" width="30">
+          <img src="JOSUE.jpg" alt="GitHub Josué">
         </a>
         <a href="https://github.com/AngelhtProgrammer" target="_blank">
-          <img src="angel.jpg" alt="GitHub Ángel" width="30">
+          <img src="angel.jpg" alt="GitHub Ángel">
         </a>
-         <a href="https://github.com/VictoriaBlanco02" target="_blank">
-          <img src="victoria.jpg" alt="GitHub Victoria" width="30">
+    
+        </a>
       </div>
 
       <p class="texto">
-        ¿Quieres aprender más sobre las guacamayas venezolanas? 
+        ¿Quieres aprender más sobre la guacamaya Caraqueña? 
         <a href="https://es.wikipedia.org/wiki/Guacamaya" target="_blank">Visita la página de Wikipedia</a>
       </p>
     </section>
@@ -219,9 +256,10 @@ Comercio ilegal: El comercio de guacamayas como mascotas es una amenaza para las
 
   <!-- Pie de Página -->
   <footer>
-    <p>© 2025 Guacamayas Venezolanas - Todos los derechos reservados.</p>
+    <p>© 2025 Guacamaya Caraqueña - Todos los derechos reservados.</p>
   </footer>
 
 </body>
 </html>
+
 
